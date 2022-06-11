@@ -33,6 +33,40 @@
 </p>
 </div>
 
+# Vim Basics I always forget
+Move between windows: `Ctrl W` if you wait you will see all the options available 
+Scroll by paragraph: `Ctrl {|}`
+Visual selection: `v`
+Select the entire line: `Shift V`
+Jump on different places by searching the initial of the worrd: `f<character>`
+Jump forward and land right before <character>: `t<character>`
+Indentation: `<<` indent left `>>` indent right
+Pressing `%` will move you from parenthisis to the other
+
+### Moving by word
+
+w                # Move forward by one word
+b                # Move back by one word
+e                # Move to end of current word
+
+### Searching in the text
+
+/word            # Highlights all occurrences of word after cursor
+?word            # Highlights all occurrences of word before cursor
+n                # Moves cursor to next occurrence of word after search
+N                # Moves cursor to previous occerence of word
+
+:%s/foo/bar/g    # Change 'foo' to 'bar' on every line in the file
+:s/foo/bar/g     # Change 'foo' to 'bar' on the current line
+:%s/\n/\r/g      # Replace new line characters with new line characters
+
+# Configuration Basics
+
+Open filetree: <Space>+s
+Open magicsearch: ,ff
+
+
+
 # Introduction
 
 This repo hosts my Nvim configuration for Linux, macOS, and Windows.
