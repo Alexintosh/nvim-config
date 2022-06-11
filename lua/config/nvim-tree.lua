@@ -21,6 +21,7 @@ nvim_tree.setup({
     number = false,
     relativenumber = false,
     signcolumn = "yes",
+    adaptive_size = true,
     mappings = {
       custom_only = false,
       list = {
