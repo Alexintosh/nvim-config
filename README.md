@@ -1,12 +1,20 @@
 # Vim Basics I always forget
-Move between windows: `Ctrl W` if you wait you will see all the options available 
+Move between windows: `Ctrl W` if you wait you will see all the options available.
+
 Scroll by paragraph: `Ctrl {|}`
+
 Visual selection: `v`
+
 Select the entire line: `Shift V`
+
 Jump on different places by searching the initial of the worrd: `f<character>`
+
 Jump forward and land right before <character>: `t<character>`
+    
 Indentation: `<<` indent left `>>` indent right
+    
 Pressing `%` will move you from parenthisis to the other
+    
 Switch between the last 2 buffer: `Ctrl ]`
 
 ### Moving by word
@@ -29,14 +37,15 @@ N                # Moves cursor to previous occerence of word
 # Configuration Basics
 
 Open filetree: <Space>+s
+
 Open magicsearch: ,ff
+
 Switch between tabs `Shift Left | right`
 
 # Guides
 ### Buffers
 We use BufferLine in this config, see the docs for more info.
 - https://jdhao.github.io/2018/09/29/Switching_buffers_quickly_Neovim/
--
 
 # Context
 
@@ -126,6 +135,7 @@ For more UI demos, check [here](https://github.com/jdhao/nvim-config/issues/15).
     </a>
 </p>
 </div>
+    
 ## Start screen with alpha-nvim
 
 <p align="center">
