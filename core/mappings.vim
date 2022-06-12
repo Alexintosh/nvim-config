@@ -4,6 +4,9 @@
 nnoremap ; :
 xnoremap ; :
 
+" Buffer navigation mappings
+nnoremap <S-left> :bnext<CR> 
+nnoremap <S-right> :bprevious<CR> 
 " Quicker way to open command window
 nnoremap q; q:
 
@@ -21,7 +24,7 @@ nnoremap <leader>P m`O<ESC>p``
 " Shortcut for faster save and quit
 nnoremap <silent> <leader>w :<C-U>update<CR>
 " Saves the file if modified and quit
-nnoremap <silent> <leader>q :<C-U>x<CR>
+nnoremap <silent> <leader>q :bdelete<CR>
 " Quit all opened buffers
 nnoremap <silent> <leader>Q :<C-U>qa!<CR>
 
@@ -41,7 +44,7 @@ nnoremap<silent> \x :<C-U>windo lclose <bar> cclose<CR>
 
 " Close a buffer and switching to another buffer, do not close the
 " window, see https://stackoverflow.com/q/4465095/6064933
-nnoremap <silent> \d :<C-U>bprevious <bar> bdelete #<CR>
+nnoremap <silent> \\ :<C-U>bprevious <bar> bdelete #<CR>
 
 " Insert a blank line below or above current line (do not move the cursor),
 " see https://stackoverflow.com/a/16136133/6064933
@@ -89,7 +92,7 @@ inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " Edit and reload init.vim quickly
 nnoremap <silent> <leader>ev :<C-U>tabnew $MYVIMRC <bar> tcd %:h<cr>
-nnoremap <silent> <leader>sv :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC <bar>
+nnoremap <silent> <leader>rr :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', {'title': 'nvim-config'})<cr>
 
 " Reselect the text that has just been pasted, see also https://stackoverflow.com/a/4317090/6064933.

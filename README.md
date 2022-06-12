@@ -1,38 +1,3 @@
-<div align="center">
-<p>
-    <a>
-      <img alt="Linux" src="https://img.shields.io/badge/Linux-%23.svg?style=flat-square&logo=linux&color=FCC624&logoColor=black" />
-    </a>
-    <a>
-      <img alt="macOS" src="https://img.shields.io/badge/macOS-%23.svg?style=flat-square&logo=apple&color=000000&logoColor=white" />
-    </a>
-    <a>
-      <img alt="Windows" src="https://img.shields.io/badge/Windows-%23.svg?style=flat-square&logo=windows&color=0078D6&logoColor=white" />
-    </a>
-    <a href="https://github.com/jdhao/nvim-config/commits">
-      <img src="https://badgen.net/github/commits/jdhao/nvim-config" alt="Commit number" />
-    </a>
-    <a href="https://github.com/jdhao/nvim-config/network">
-      <img alt="Forks" src="https://badgen.net/github/forks/jdhao/nvim-config">
-    </a>
-    <a href="https://github.com/jdhao/nvim-config/stargazers">
-      <img alt="Stars" src="https://badgen.net/github/stars/jdhao/nvim-config">
-    </a>
-    <a href="https://github.com/jdhao/nvim-config/releases/latest">
-      <img alt="Latest release" src="https://img.shields.io/github/v/release/jdhao/nvim-config" />
-    </a>
-    <a href="https://github.com/neovim/neovim/releases/tag/stable">
-      <img src="https://img.shields.io/badge/Neovim-0.7.0-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=green" alt="Neovim minimum version"/>
-    </a>
-    <a href="https://github.com/jdhao/nvim-config/search?l=vim-script">
-      <img src="https://img.shields.io/github/languages/top/jdhao/nvim-config" alt="Top languages"/>
-    </a>
-    <a href="https://github.com/jdhao/nvim-config/blob/master/LICENSE">
-      <img src="https://img.shields.io/github/license/jdhao/nvim-config?style=flat-square&logo=GNU&label=License" alt="License"/>
-    </a>
-</p>
-</div>
-
 # Vim Basics I always forget
 Move between windows: `Ctrl W` if you wait you will see all the options available 
 Scroll by paragraph: `Ctrl {|}`
@@ -42,6 +7,7 @@ Jump on different places by searching the initial of the worrd: `f<character>`
 Jump forward and land right before <character>: `t<character>`
 Indentation: `<<` indent left `>>` indent right
 Pressing `%` will move you from parenthisis to the other
+Switch between the last 2 buffer: `Ctrl ]`
 
 ### Moving by word
 
@@ -64,10 +30,15 @@ N                # Moves cursor to previous occerence of word
 
 Open filetree: <Space>+s
 Open magicsearch: ,ff
+Switch between tabs `Shift Left | right`
 
+# Guides
+### Buffers
+We use BufferLine in this config, see the docs for more info.
+- https://jdhao.github.io/2018/09/29/Switching_buffers_quickly_Neovim/
+-
 
-
-# Introduction
+# Context
 
 This repo hosts my Nvim configuration for Linux, macOS, and Windows.
 `init.vim` is the config entry point for terminal Nvim,
@@ -121,7 +92,40 @@ and how to set up on different platforms (Linux, macOS, and Windows).
 # UI Demo
 
 For more UI demos, check [here](https://github.com/jdhao/nvim-config/issues/15).
-
+<div align="center">
+<p>
+    <a>
+      <img alt="Linux" src="https://img.shields.io/badge/Linux-%23.svg?style=flat-square&logo=linux&color=FCC624&logoColor=black" />
+    </a>
+    <a>
+      <img alt="macOS" src="https://img.shields.io/badge/macOS-%23.svg?style=flat-square&logo=apple&color=000000&logoColor=white" />
+    </a>
+    <a>
+      <img alt="Windows" src="https://img.shields.io/badge/Windows-%23.svg?style=flat-square&logo=windows&color=0078D6&logoColor=white" />
+    </a>
+    <a href="https://github.com/jdhao/nvim-config/commits">
+      <img src="https://badgen.net/github/commits/jdhao/nvim-config" alt="Commit number" />
+    </a>
+    <a href="https://github.com/jdhao/nvim-config/network">
+      <img alt="Forks" src="https://badgen.net/github/forks/jdhao/nvim-config">
+    </a>
+    <a href="https://github.com/jdhao/nvim-config/stargazers">
+      <img alt="Stars" src="https://badgen.net/github/stars/jdhao/nvim-config">
+    </a>
+    <a href="https://github.com/jdhao/nvim-config/releases/latest">
+      <img alt="Latest release" src="https://img.shields.io/github/v/release/jdhao/nvim-config" />
+    </a>
+    <a href="https://github.com/neovim/neovim/releases/tag/stable">
+      <img src="https://img.shields.io/badge/Neovim-0.7.0-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=green" alt="Neovim minimum version"/>
+    </a>
+    <a href="https://github.com/jdhao/nvim-config/search?l=vim-script">
+      <img src="https://img.shields.io/github/languages/top/jdhao/nvim-config" alt="Top languages"/>
+    </a>
+    <a href="https://github.com/jdhao/nvim-config/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/jdhao/nvim-config?style=flat-square&logo=GNU&label=License" alt="License"/>
+    </a>
+</p>
+</div>
 ## Start screen with alpha-nvim
 
 <p align="center">
@@ -186,9 +190,9 @@ Some of the shortcuts I use frequently are listed here. In the following shortcu
 | `<leader><Space>` | Normal        | Linux/macOS/Win | Remove trailing white spaces                                     |
 | `<leader>v`       | Normal        | Linux/macOS/Win | Reselect last pasted text                                        |
 | `<leader>ev`      | Normal        | Linux/macOS/Win | Edit Nvim config in a new tabpage                                |
-| `<leader>sv`      | Normal        | Linux/macOS/Win | Reload Nvim config                                               |
+| `<leader>rr`      | Normal        | Linux/macOS/Win | Reload Nvim config                                               |
 | `<leader>st`      | Normal        | Linux/macOS/Win | Show highlight group for cursor text                             |
-| `<leader>q`       | Normal        | Linux/macOS/Win | Quit current window                                              |
+| `<leader>q`       | Normal        | Linux/macOS/Win | Deletes current buffer                                           |
 | `<leader>Q`       | Normal        | Linux/macOS/Win | Quit all window and close Nvim                                   |
 | `<leader>w`       | Normal        | Linux/macOS/Win | Save current buffer content                                      |
 | `<leader>y`       | Normal        | Linux/macOS/Win | Copy the content of entire buffer to default register            |
@@ -205,7 +209,7 @@ Some of the shortcuts I use frequently are listed here. In the following shortcu
 | `<F11>`           | Normal        | Linux/macOS/Win | Toggle spell checking                                            |
 | `<F12>`           | Normal        | Linux/macOS/Win | Toggle paste mode                                                |
 | `\x`              | Normal        | Linux/macOS/Win | Close location or quickfix window                                |
-| `\d`              | Normal        | Linux/macOS/Win | Close current buffer and go to previous buffer                   |
+| `\\`              | Normal        | Linux/macOS/Win | Close current buffer and go to previous buffer                   |
 | `{count}gb`       | Normal        | Linux/macOS/Win | Go to buffer {count}  or next buffer in the buffer list.         |
 | `Alt-m`           | Normal        | macOS/Win       | Markdown previewing in system browser                            |
 | `Alt-Shift-m`     | Normal        | macOS/Win       | Stopping Markdown previewing in system browser                   |

@@ -350,6 +350,11 @@ require("packer").startup({
     -- show and trim trailing whitespaces
     use {'jdhao/whitespace.nvim', event = 'VimEnter'}
 
+    use {
+        'romgrk/barbar.nvim',
+        requires = {'kyazdani42/nvim-web-devicons'}
+    }
+
     -- file explorer
     use {
       'kyazdani42/nvim-tree.lua',
