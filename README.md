@@ -209,7 +209,7 @@ Some of the shortcuts I use frequently are listed here. In the following shortcu
 | `<F11>`           | Normal        | Linux/macOS/Win | Toggle spell checking                                            |
 | `<F12>`           | Normal        | Linux/macOS/Win | Toggle paste mode                                                |
 | `\x`              | Normal        | Linux/macOS/Win | Close location or quickfix window                                |
-| `\\`              | Normal        | Linux/macOS/Win | Close current buffer and go to previous buffer                   |
+| `\j`              | Normal        | Linux/macOS/Win | Close current buffer and go to previous buffer                   |
 | `{count}gb`       | Normal        | Linux/macOS/Win | Go to buffer {count}  or next buffer in the buffer list.         |
 | `Alt-m`           | Normal        | macOS/Win       | Markdown previewing in system browser                            |
 | `Alt-Shift-m`     | Normal        | macOS/Win       | Stopping Markdown previewing in system browser                   |
